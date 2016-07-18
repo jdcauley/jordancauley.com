@@ -19,7 +19,7 @@
 
     <div class="col one-third left-col">
       <header class="main-header">
-        <a class="logo" href="http://jordancauley.com" title="<%= org_name %>">
+        <a class="logo" href="<%= base_url %>" title="<%= org_name %>">
           <img class="logo-img" src="<%= base_url %>/assets/imgs/jordancauley.jpg">
           <h4 class="site-title">Jordan Cauley</h4>
         </a>
@@ -53,11 +53,7 @@
 
     </div>
     <main class="col two-thirds offset-one-third right-col">
-      <% if(current.path[0] === "post" && current.source !== 'index') { %>
-        <%- partial(current.path[0] + "/_nest") %>
-      <% } else { %>
-        <%- yield %>
-      <% } %>
+      <%- yield %>
 
     </main>
     <footer class="col two-thirds offset-one-third right-col main-footer">

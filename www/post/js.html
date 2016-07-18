@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jordan Cauley</title>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,500,700|PT+Mono' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/app.css">
+    <link rel="stylesheet" href="http://cauley.co/assets/css/app.css">
   </head>
   <body class="page-post">
 
     <div class="col one-third left-col">
       <header class="main-header">
-        <a class="logo" href="http://jordancauley.com" title="Jordan Cauley">
-          <img class="logo-img" src="/assets/imgs/jordancauley.jpg">
+        <a class="logo" href="http://cauley.co" title="Jordan Cauley">
+          <img class="logo-img" src="http://cauley.co/assets/imgs/jordancauley.jpg">
           <h4 class="site-title">Jordan Cauley</h4>
         </a>
         <!-- <h4 class="site-title"></h4> -->
@@ -22,19 +22,19 @@
         <ul>
           <li>
           
-            <a href="/">Home</a>
+            <a href="http://cauley.co/">Home</a>
           
           </li>
       
         
           <li>
-            <a href="/pages/about">About Me</a>
+            <a href="http://cauley.co/pages/about">About Me</a>
           </li>
         
       
         
           <li>
-            <a href="/pages/contact">Contact Me</a>
+            <a href="http://cauley.co/pages/contact">Contact Me</a>
           </li>
         
       
@@ -43,13 +43,15 @@
 
     </div>
     <main class="col two-thirds offset-one-third right-col">
-      
-        <article class="article">
-            <h1><a href="/post/js"></a></h1>
-            <h2>General Principles</h2><p>The goal of this style guide to promote clean, efficient, and perhaps most importantly, readable code. To achieve this goal, we seek to have consistently and logically formatted code.</p>
-<h2>Syntax</h2><h3>Indenting</h3><p>Our preferred indent style for JavaScript is one tab set to two space.</p>
-<h3>White space</h3><p>Our preferred use of white space</p>
-<h4>Line breaks</h4><p>Discrete functions should be seperated by two line breaks, but code inside functions should be seperated by only one line break. This is right:</p>
+      <p>##General Principles</p>
+<p>The goal of this style guide to promote clean, efficient, and perhaps most importantly, readable code. To achieve this goal, we seek to have consistently and logically formatted code.</p>
+<p>##Syntax</p>
+<p>###Indenting</p>
+<p>Our preferred indent style for JavaScript is one tab set to two space.</p>
+<p>###White space</p>
+<p>Our preferred use of white space</p>
+<p>####Line breaks</p>
+<p>Discrete functions should be seperated by two line breaks, but code inside functions should be seperated by only one line break. This is right:</p>
 <pre><code>function nameOfFunctionOne(){
 
   var thisThing = &#39;a string thing&#39;;
@@ -81,7 +83,8 @@ function nameOfFunctionTwo(){
   var thisThing = &#39;a string thing&#39;;
     ...
 }
-</code></pre><h4>Parentheses</h4><p>Our preferred style of spacing for statements inside of parentheses is to have a space between the parentheses and the statement inside.</p>
+</code></pre><p>####Parentheses</p>
+<p>Our preferred style of spacing for statements inside of parentheses is to have a space between the parentheses and the statement inside.</p>
 <p>This is correct:</p>
 <pre><code>function( param1, param2 ){
   if( boolean ){
@@ -94,7 +97,8 @@ function nameOfFunctionTwo(){
         ...
     }
 }
-</code></pre><h3>Logical operators</h3><p>Our preferred style of handling logical statements with one boolean is to not include a</p>
+</code></pre><p>###Logical operators</p>
+<p>Our preferred style of handling logical statements with one boolean is to not include a</p>
 <pre><code>if( isCorrect ){
     ...
 }
@@ -110,8 +114,11 @@ if( !isCorrect ){
 if( isCorrect != true ){
 
 }
-</code></pre><h2>Variables</h2><h3>Naming</h3><p>Variables should be camel-cased and descriptively named.</p>
-<h3>Declarations</h3><p>When possible, variables should be instantiated with one use of the &quot;var&quot; keyword. Declare all variables required for a given scope level at once. Removing unnecessary uses of the word &quot;var&quot; is better for performance.</p>
+</code></pre><p>##Variables</p>
+<p>###Naming</p>
+<p>Variables should be camel-cased and descriptively named.</p>
+<p>###Declarations</p>
+<p>When possible, variables should be instantiated with one use of the &quot;var&quot; keyword. Declare all variables required for a given scope level at once. Removing unnecessary uses of the word &quot;var&quot; is better for performance.</p>
 <p>This is fine:</p>
 <pre><code>var red,
     orange,
@@ -122,14 +129,18 @@ if( isCorrect != true ){
 var orange;
 var green;
 var blue;
-</code></pre><h3>Booleans</h3><p>Booleans should be written as &quot;isCondition&quot; or &quot;hasProperty&quot; so that they can be immediately recognized as booleans. These are fine:</p>
+</code></pre><p>###Booleans</p>
+<p>Booleans should be written as &quot;isCondition&quot; or &quot;hasProperty&quot; so that they can be immediately recognized as booleans. These are fine:</p>
 <pre><code>hasCorrectName = true;
 isCorrectlyNamed = true;
 </code></pre><p>but this isn&#39;t:</p>
 <pre><code>correctName = false;
-</code></pre><h3>Variable Nomeclature</h3><p>Code for Greensboro uses a variety of tools to minify and concatenate JavaScript. The result is that all variable names will be replaced with single characters in production.</p>
+</code></pre><p>###Variable Nomeclature</p>
+<p>Code for Greensboro uses a variety of tools to minify and concatenate JavaScript. The result is that all variable names will be replaced with single characters in production.</p>
 <p>This provides an advantage in that we can be very clear about function and variable names when writing JavaScript. For this reason single-letter variables should be reserved for writing loops.</p>
-<h2>Loops</h2><h3>For Loops</h3><p>A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the &quot;var&quot; keyword and thereby saving processing power. This is correct:</p>
+<p>##Loops</p>
+<p>###For Loops</p>
+<p>A for loop should be written such that its conditional statement is a variable, not the property of a variable. This is done to increase processing speed. This variable should be declared in the for loops initialization, to cut down on use of the &quot;var&quot; keyword and thereby saving processing power. This is correct:</p>
 <pre><code>for( var i=0, x=array.length; i&lt;x; i++ ){
   {...}
 }
@@ -142,16 +153,16 @@ var x = array.length;
 for( i=0; i&lt;x; i++ ){
   {...}
 }
-</code></pre><h2>jQuery</h2><p>jQuery is a powerful library that makes performing DOM manipulation much easier. But like all powerful things, it must be checked.</p>
-<h3>Objects</h3><p>If a jQuery object is to be used multiple times, it should be declared as a variable, to cut down on both redundant objects and use of the $() function. Example:</p>
+</code></pre><p>##jQuery</p>
+<p>jQuery is a powerful library that makes performing DOM manipulation much easier. But like all powerful things, it must be checked.</p>
+<p>###Objects</p>
+<p>If a jQuery object is to be used multiple times, it should be declared as a variable, to cut down on both redundant objects and use of the $() function. Example:</p>
 <pre><code>var header = $( &#39;.header&#39; ),
     headerHeight = header.height();
 </code></pre><p>Some people like to preface variables that are jQuery objects with a $ (e.g. $header) and this is fine but not required.</p>
-<h3>Selectors</h3><p>Selectors should be as concise as possible
+<p>###Selectors</p>
+<p>Selectors should be as concise as possible
 jQuery selectors should be as concise as possible. Each additional selector reduces the preformance of your JavaScript, and reduces rendering speed.</p>
-        </article>
-
-      
 
     </main>
     <footer class="col two-thirds offset-one-third right-col main-footer">
@@ -159,8 +170,8 @@ jQuery selectors should be as concise as possible. Each additional selector redu
         &copy; Jordan Cauley 2015
       </div>
     </footer>
-    <script src="/assets/js/sprint.min.js"></script>
-    <script src="/assets/js/app.js"></script>
+    <script src="http://cauley.co/assets/js/sprint.min.js"></script>
+    <script src="http://cauley.co/assets/js/app.js"></script>
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
  </body>
 </html>
